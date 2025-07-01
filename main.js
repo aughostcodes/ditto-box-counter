@@ -61,17 +61,7 @@ resetButton.addEventListener('click', () => {
 firstNumberInput.addEventListener('change', updateFirstCounter);
 
 // Key press event for right and left arrows to increase/decrease the first counter
-let isWindowFocused = false;
 let mouseHovering = false;
-
-// Track when the window is focused
-window.addEventListener('focus', () => {
-    isWindowFocused = true;
-});
-
-window.addEventListener('blur', () => {
-    isWindowFocused = false;
-});
 
 // Track when mouse enters or leaves the window
 document.addEventListener('mouseenter', () => {
@@ -82,9 +72,9 @@ document.addEventListener('mouseleave', () => {
     mouseHovering = false;
 });
 
-// Handle the keypress event globally only when the window is focused and mouse is hovering
+// Handle the keypress event globally only when the mouse is hovering over the window
 window.addEventListener('keydown', (e) => {
-    if (isWindowFocused && mouseHovering) {
+    if (mouseHovering) {
         if (e.key === 'ArrowRight') {
             // Increase the first number
             let firstNumber = parseInt(firstNumberInput.value);
