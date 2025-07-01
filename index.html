@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" />
+    <title>Ditto Box Counter</title>
+
+</head>
+
+<body>
+    <h1>Ditto Box Counter</h1>
+
+    <div class="counter-container">
+        <!-- First Counter: Total Box Count -->
+        <div class="counter-box">
+            <label for="firstNumber">Total Box Count</label>
+            <div class="counter-box-inner">
+                <button id="decreaseFirst">-</button>
+                <input type="number" id="firstNumber" value="0">
+                <button id="increaseFirst">+</button>
+            </div>
+        </div>
+
+        <!-- Second Counter: 31s -->
+        <div class="counter-box">
+            <label for="secondNumber">31s</label>
+            <div class="counter-box-inner">
+                <button id="decreaseSecond">-</button>
+                <input type="number" id="secondNumber" value="0">
+                <button id="increaseSecond">+</button>
+            </div>
+        </div>
+
+        <!-- Reset Button -->
+        <button class="reset-button" id="resetButton">Reset</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
